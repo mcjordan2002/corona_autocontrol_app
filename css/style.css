@@ -1,0 +1,107 @@
+.preloader-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8eaf6;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;  
+}
+
+body{
+	font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: .020em;
+    line-height: 2.1428;
+    color: #7e7e7e;
+	background: white;
+	font-size: 0.95em;
+}
+
+.quiz_wrapper .options ul{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.quiz_wrapper .options ul li{
+	display: inline-block;
+	background-color: #03a9f4;
+	width: 47%;
+	padding: 15px;
+	border-radius:8px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: 15px;
+	color:#ffffff;
+	box-shadow: 0px 3px 0px grey;
+	cursor: pointer;
+	outline: none;
+	text-align: center;
+}
+.quiz_wrapper .options ul li:active{
+	box-shadow: 0px 3px 0px transparent;	
+
+}
+.quiz_wrapper .options ul li.choisi{
+	background-color:  #7e57c2;
+}
+
+.quiz_wrapper .score .next button:active{
+box-shadow: 0px 3px 0px transparent;	
+}
+
+/*.quiz_wrapper .options ul li:hover {
+	background-color: #757575;
+	box-shadow: 0px 3px 0px #757575;
+}*/
+
+@media screen and (max-width: 680px) {
+	#scoreCard {
+		font-weight: bold;
+		
+	}
+	#questionBox {
+		font-size: 0.2em;
+	}
+	#blo {
+		display: block;
+	}
+	#ttext {
+		font-size: 0.9em;
+	}
+	#collapse {
+		font-size: 0.80em;
+	}
+}
+
+li strong {
+	color: #ff9800;
+	font-size: 1.3em;
+	margin-right: 10px;
+}
+
+#footer a {
+	text-decoration: underline;
+	color: white;
+}
+
+#footer1 a {
+	display: flex;
+	text-decoration: underline;
+	justify-content: space-around;
+	color: white;
+}
+
+.button-class {
+	background-color: white;
+}
+
+#restart {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

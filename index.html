@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Covid-19 : Auto-contrôle</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<link rel="icon" href="images/icon.png" type="image/x-icon">
+	 <!-- Compiled and minified CSS -->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	 <!-- Compiled and minified JavaScript -->
+	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!--					Preloader					-->
+	<div class="preloader-background">
+		<div class="preloader-wrapper big active">
+			<div class="spinner-layer spinner-green-only">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div>
+				<div class="gap-patch">
+					<div class="circle"></div>
+				</div>
+				<div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--				Header					-->
+     <header>
+		<nav class="nav-wrapper" style="background-color: #008dc9;">
+			<div class="container">
+				<div class="row">
+						<div class="col s12 m6 l3 white-text text-accent-4" style="display: flex; justify-content: space-between; font-size: 1.3em;"> <img src="images/icon.png" alt="icon" width="200px" height="55px" style=" padding-top: 8px; padding-right: 4px;"></div>
+						<!--<div class="grid-example col"></div>-->	
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!--					Quiz Container					-->
+	<div class="quiz_wrapper container white" style="margin-top: 50px; max-height: 500px;">
+		<div class="container white z-depth-1">
+		<div class="row">
+			<div class="col s12 question deep-purple lighten-1 white-text text-darken-3 center align" id="questionBox" style="font-size:  1em;"></div>
+			<div class="container" style="opacity: 0;">+</div>
+				<div class="container teal lighten-3" id="+in" style="padding: 10px; display: none;">
+						<h6 class="container black-text" style="font-size: 0.9em;">Veuillez noter que les résultats de ce test peuvent être influencés par quelques facteurs externes:</h6>
+						<ul class="white-text text-darken-2" style="font-size: 0.9em;">
+							<li>- Avoir ou avoir eu un cancer ces trois dernières années.</li>
+							<li>- Avoir une maladie respiratoire.</li>
+							<li>- Prendre un traitement immunosuppresseur ? C’est un traitement qui diminue vos défenses contre les infections.</li>
+							<li>- Avoir une maladie connue pour diminuer vos défenses immunitaires.</li>
+						</ul>
+				</div>
+			<div class="col s12 options" style="padding: 20px;">
+				<div class="container">
+				 <ul id="ul">
+					
+					 <li id="op1" onclick="button(this)"></li>
+					 <li id="op2" onclick="button(this);"></li>
+				 </ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="score col s12">
+					<div class="next">
+						<div class="container">
+							<div class="score">		
+									<div><button style="display: none;" class="waves-effect waves-light btn-large orange" type="button" onclick="restart()" id="restart"><i class="material-icons right">autorenew</i>     Repasser le test    </button></div>
+							</div>
+						</div>
+						<div class="container" id="ttext" style="display: flex; justify-content: space-between; padding: 2px;">
+							<button class="waves-effect waves-light btn-large teal left-align" type="button" onclick="prev();" id="previous"><i class="material-icons left" style="transform: rotate(180deg);">send</i>     Précédent    </button>
+							<div class="section-container" style="opacity: 0;">++++</div>
+							<button class="waves-effect waves-light btn-large orange right-align button-class" type="button" onclick="next();" id="button"><i class="material-icons right">send</i>     Suivant    </button>
+						</div>
+				
+					</div>
+
+				</div>
+			</div>
+	   </div>
+   </div>
+  </div>
+  <div class="container" style="opacity: 0;">+ <br> +</div>
+	<!--					Plus d'informations					-->
+	<div class="section container" id="collapse" style="padding-top: 30px; padding-bottom: 50px;">
+			<h4 class="flow-text grey-text text-darken-3" id="text" style="text-align: center; font-weight: 600;">
+				RETROUVEZ LES INFORMATIONS OFFICIELLES<h5 class="center-align" style="font-size: 0.95em;">(Cliquez sur le logo ou rendez vous sur : https://www.gouv.bj/coronavirus)</h5>
+			</h4>
+			<div class="container center-align">
+				<ul class="collapsible" style="width: 100%;">
+					<li>
+						<a href="https://www.gouv.bj/coronavirus" target="new"><img class="responsive-img" src="images/logo_gouv.png" alt="gouv"></a>
+					</li>
+				</ul>
+			</div>
+	</div>
+
+	<!--					footer					-->
+	<footer class="page-footer" style="background-color: #008dc9;">
+		<div id="footer">
+			<div class="center-align">Méthodologie inspirée des recommandations du <a href="http://www.doh.gov.ph/" title="Cliquez" target="new">www.doh.gov.ph</a>. Attention : cette page ne remplace pas un avis médical.</div>
+			<div class="footer-copyright">
+				<div class="container center-align">Covid-19 : Auto-contrôle, <a href="https://www.linkedin.com/in/jordan-mc-875530180/" title="Cliquez">Jordan Vitou</a>@<a href="http://www.epitech.bj/" title="Cliquez">Epitech Bénin</a>, &copy; 2020</div> <br>
+			</div>
+		</div>
+	</footer>
+
+<script src="js/scripts.js"></script>
+	<!--					Javascript					-->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(){
+				$('.preloader-background').delay(1700).fadeOut('slow');
+				
+				$('.preloader-wrapper')
+					.delay(1700)
+					.fadeOut();
+		});
+		document.addEventListener('DOMContentLoaded', function() {
+			var elems = document.querySelectorAll('.collapsible');
+			var instances = M.Collapsible.init(elems, []);
+		});
+
+		// Or with jQuery
+
+		$(document).ready(function(){
+			$('.collapsible').collapsible();
+		});
+		</script>
+
+</body>
+</html>
